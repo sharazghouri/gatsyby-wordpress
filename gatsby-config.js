@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `My WordPress blog`,
+    description: `We are learning how to develop gatsby site using WordPress as source.`,
+    author: `@sharazghouri1`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,6 +25,19 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        /*
+         * The base URL of the WordPress site without the trailingslash and the protocol. This is required.
+         * Example : 'demo.wp-api.org' or 'www.example-site.com'
+         */
+        baseUrl: "localhost/jalbee",
+        // The protocol. This can be http or https.
+        protocol: "http",
+
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

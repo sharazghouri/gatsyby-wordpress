@@ -620,3 +620,13 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+
+.post-title{
+  color:#000;
+}
+
+.post-title:hover{
+  color:#000;
+  text-decoration: none;
+}
